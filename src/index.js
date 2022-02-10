@@ -44,7 +44,6 @@ function retreiveRamen (ramen) {
     let imgRamen = document.createElement("img")
     // let detailsRamen = document.createElement("li")
 
-
     // Add style or content to elements
     imgRamen.src = ramen.image
     imgRamen.addEventListener("click", function () {
@@ -56,17 +55,20 @@ function retreiveRamen (ramen) {
         commentRamen.textContent = ramen.comment
     })
     
+
     // detailsRamen.textContent = ramen.img
 
 
     // Append if necessary
     menuRamen.append(imgRamen)
 
+
 }
 
 function addRamen () {
     formRamen.addEventListener("submit", function (event) {
     event.preventDefault();
+    // let newRamenImg = document.createElement("img")
     console.log("PREVENT DEFAULT STOPPED")
     newRamenUser = {
         newName: newName.value,
@@ -75,12 +77,12 @@ function addRamen () {
         newRtg: newRtg.value,
         newCmt: newCmt.value,
     }
-    
-    
+    // newRamenImg.src = newRamenUser[newImg]
+    console.log("New Ramen User: ", newRamenUser)
 
     retreiveRamen(newRamenUser)
 
-    menuRamen.append(newRamenUser.newImg)
+    menuRamen.append(newRamenImg)
 
     newRamen.push(newRamenUser)
 
